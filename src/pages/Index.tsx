@@ -17,11 +17,12 @@ const Index = () => {
     <div className="min-h-screen relative overflow-hidden bg-gradient-to-b from-dojo to-black">
       {/* Background Image */}
       <div
-        className="absolute inset-0 opacity-10"
+        className="absolute inset-0 opacity-20 bg-blend-overlay"
         style={{
-          backgroundImage: 'url("https://images.unsplash.com/photo-1469474968028-56623f02e42e")',
+          backgroundImage: 'url("/lovable-uploads/b7035bc9-e75e-46cf-9b1a-35e338bc315d.png")',
           backgroundSize: "cover",
           backgroundPosition: "center",
+          filter: "brightness(0.8) contrast(1.1)",
           transform: "scale(1.1)",
         }}
       />
