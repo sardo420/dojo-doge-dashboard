@@ -2,7 +2,6 @@ import { MetricCard } from "@/components/MetricCard";
 import { SocialLink } from "@/components/SocialLink";
 import { ContractAddress } from "@/components/ContractAddress";
 import { Twitter, Globe, BarChart3, ExternalLink } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const Index = () => {
   // These would come from your API or be updated dynamically
@@ -21,7 +20,7 @@ const Index = () => {
         className="absolute inset-0 opacity-20 bg-blend-overlay"
         style={{
           backgroundImage: 'url("/lovable-uploads/129cdd43-185d-4ed6-b9bd-7dbe99b817a2.png")',
-          backgroundSize: "cover",
+          backgroundSize: "150%",
           backgroundPosition: "center",
           filter: "brightness(0.8) contrast(1.1)",
           transform: "scale(1.1)",
@@ -65,6 +64,11 @@ const Index = () => {
               href="https://dexscreener.com/dojodoge"
               label="DEX Screener"
             />
+            <SocialLink
+              icon={ExternalLink}
+              href={`https://solscan.io/token/${contractAddress}`}
+              label="Solscan"
+            />
           </div>
         </div>
 
@@ -72,16 +76,6 @@ const Index = () => {
         <div className="w-full max-w-2xl mx-auto animate-fadeIn [animation-delay:800ms]">
           <h2 className="text-white text-xl mb-4 text-center">Contract Address</h2>
           <ContractAddress address={contractAddress} />
-          <div className="mt-4 flex justify-center">
-            <Button
-              variant="outline"
-              className="bg-white/10 hover:bg-white/20 text-white border-white/20"
-              onClick={() => window.open(`https://bscscan.com/token/${contractAddress}`, '_blank')}
-            >
-              <ExternalLink className="w-4 h-4 mr-2" />
-              BSCScan
-            </Button>
-          </div>
         </div>
       </div>
     </div>
