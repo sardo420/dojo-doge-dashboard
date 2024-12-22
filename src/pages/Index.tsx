@@ -20,7 +20,7 @@ const Index = () => {
         className="absolute inset-0 opacity-20 bg-blend-overlay"
         style={{
           backgroundImage: 'url("/lovable-uploads/129cdd43-185d-4ed6-b9bd-7dbe99b817a2.png")',
-          backgroundSize: "150%",
+          backgroundSize: "75%",
           backgroundPosition: "center",
           filter: "brightness(0.8) contrast(1.1)",
           transform: "scale(1.1)",
