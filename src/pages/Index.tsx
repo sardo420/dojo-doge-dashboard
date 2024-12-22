@@ -19,7 +19,7 @@ const Index = () => {
       <div
         className="absolute inset-0 opacity-20 bg-blend-overlay"
         style={{
-          backgroundImage: 'url("https://ibb.co/SVPb6gW")',
+          backgroundImage: 'url("https://i.ibb.co/F8K2h1N/bg12948.jpg")',
           backgroundSize: "100%",
           backgroundPosition: "center",
           filter: "brightness(0.8) contrast(1.1)",
