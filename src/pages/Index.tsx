@@ -20,17 +20,19 @@ const Index = () => {
         className="absolute inset-0 opacity-20 bg-blend-overlay"
         style={{
           backgroundImage: 'url("/lovable-uploads/4183c626-f78e-4e7f-957f-5f48277d742a.png")',
-          backgroundSize: "100%",
+          backgroundSize: "cover",
           backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
           filter: "brightness(0.7) contrast(1.2)",
           transform: "scale(1.1)",
+          height: "100vh",
         }}
       />
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 py-16 min-h-screen flex flex-col items-center justify-center">
+      <div className="relative z-10 container mx-auto px-4 py-8 min-h-screen flex flex-col items-center">
         {/* Hero Section */}
-        <div className="text-center mb-16 animate-fadeIn [animation-delay:200ms]">
+        <div className="text-center mb-8 animate-fadeIn [animation-delay:200ms]">
           <img 
             src="/lovable-uploads/73c390be-2c30-45b4-83bd-264ba5051b45.png" 
             alt="DojoDoge Logo" 
@@ -39,14 +41,14 @@ const Index = () => {
         </div>
 
         {/* Metrics Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl mx-auto mb-16 animate-fadeIn [animation-delay:400ms]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl mx-auto mb-8 animate-fadeIn [animation-delay:400ms]">
           <MetricCard title="Market Cap" value={tokenMetrics.marketCap} />
           <MetricCard title="Circulation" value={tokenMetrics.circulation} />
           <MetricCard title="Holders" value={tokenMetrics.holders} />
         </div>
 
         {/* Links Section */}
-        <div className="flex flex-col items-center gap-8 mb-16 animate-fadeIn [animation-delay:600ms]">
+        <div className="flex flex-col items-center gap-8 mb-8 animate-fadeIn [animation-delay:600ms]">
           <div className="flex flex-wrap justify-center gap-4">
             <SocialLink
               icon={Twitter}
