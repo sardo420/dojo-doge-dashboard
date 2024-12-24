@@ -36,7 +36,7 @@ const Index = () => {
           <img 
             src="/lovable-uploads/73c390be-2c30-45b4-83bd-264ba5051b45.png" 
             alt="DojoDoge Logo" 
-            className="h-40 mx-auto mb-4 drop-shadow-[0_0_25px_rgba(255,255,255,0.15)]"
+            className="h-70 mx-auto mb-4 drop-shadow-[0_0_50px_rgba(255,255,255,0.15)]"
           />
         </div>
 
