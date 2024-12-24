@@ -1,7 +1,7 @@
 import { MetricCard } from "@/components/MetricCard";
 import { SocialLink } from "@/components/SocialLink";
 import { ContractAddress } from "@/components/ContractAddress";
-import { Twitter, Globe, BarChart3, ExternalLink } from "lucide-react";
+import { Twitter, Telegram, BarChart3, ExternalLink } from "lucide-react";
 
 const Index = () => {
   // These would come from your API or be updated dynamically
@@ -19,10 +19,10 @@ const Index = () => {
       <div
         className="absolute inset-0 opacity-20 bg-blend-overlay"
         style={{
-          backgroundImage: 'url("https://i.ibb.co/F8K2h1N/bg12948.jpg")',
+          backgroundImage: 'url("/lovable-uploads/4183c626-f78e-4e7f-957f-5f48277d742a.png")',
           backgroundSize: "100%",
           backgroundPosition: "center",
-          filter: "brightness(0.8) contrast(1.1)",
+          filter: "brightness(0.7) contrast(1.2)",
           transform: "scale(1.1)",
         }}
       />
@@ -31,12 +31,11 @@ const Index = () => {
       <div className="relative z-10 container mx-auto px-4 py-16 min-h-screen flex flex-col items-center justify-center">
         {/* Hero Section */}
         <div className="text-center mb-16 animate-fadeIn [animation-delay:200ms]">
-          <h1 className="text-6xl font-bold text-white mb-4">
-            DojoDoge
-          </h1>
-          <p className="text-dojo-light text-xl max-w-2xl mx-auto">
-            The cryptocurrency that embodies the spirit of the Dojo
-          </p>
+          <img 
+            src="/lovable-uploads/73c390be-2c30-45b4-83bd-264ba5051b45.png" 
+            alt="DojoDoge Logo" 
+            className="h-24 mx-auto mb-4"
+          />
         </div>
 
         {/* Metrics Grid */}
@@ -55,19 +54,14 @@ const Index = () => {
               label="Twitter"
             />
             <SocialLink
-              icon={Globe}
-              href="https://dojodoge.com"
-              label="Website"
+              icon={Telegram}
+              href="https://t.me/dojodoge"
+              label="Telegram"
             />
             <SocialLink
               icon={BarChart3}
               href="https://dexscreener.com/dojodoge"
               label="DEX Screener"
-            />
-            <SocialLink
-              icon={ExternalLink}
-              href={`https://solscan.io/token/${contractAddress}`}
-              label="Solscan"
             />
           </div>
         </div>
@@ -76,6 +70,13 @@ const Index = () => {
         <div className="w-full max-w-2xl mx-auto animate-fadeIn [animation-delay:800ms]">
           <h2 className="text-white text-xl mb-4 text-center">Contract Address</h2>
           <ContractAddress address={contractAddress} />
+          <div className="mt-4 flex justify-center">
+            <SocialLink
+              icon={ExternalLink}
+              href={`https://solscan.io/token/${contractAddress}`}
+              label="Solscan"
+            />
+          </div>
         </div>
       </div>
     </div>
