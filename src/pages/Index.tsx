@@ -1,7 +1,7 @@
 import { MetricCard } from "@/components/MetricCard";
 import { SocialLink } from "@/components/SocialLink";
 import { ContractAddress } from "@/components/ContractAddress";
-import { Twitter, Telegram, BarChart3, ExternalLink } from "lucide-react";
+import { Twitter, MessageCircle, BarChart3, ExternalLink } from "lucide-react";
 
 const Index = () => {
   // These would come from your API or be updated dynamically
@@ -54,7 +54,7 @@ const Index = () => {
               label="Twitter"
             />
             <SocialLink
-              icon={Telegram}
+              icon={MessageCircle}
               href="https://t.me/dojodoge"
               label="Telegram"
             />
