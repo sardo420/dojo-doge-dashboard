@@ -35,7 +35,7 @@ const Index = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 min-h-screen flex flex-col items-center">
         {/* Hero Section */}
-        <div className="text-center mb-16 animate-fadeIn [animation-delay:200ms] mt-2"> {/* Reduced from mt-8 */}
+        <div className="text-center mb-32 animate-fadeIn [animation-delay:200ms] mt-0"> {/* Reduced from mt-8 */}
           <img 
             src="/lovable-uploads/5730045a-4732-4583-835d-0b37acb24824.png" 
             alt="DojoDoge Logo" 
