@@ -26,7 +26,7 @@ const Index = () => {
           backgroundRepeat: "no-repeat",
           filter: "brightness(0.7) contrast(1.2)",
           transform: "scale(1.1)",
-          height: "40vh", // Reduced from 50vh
+          height: "50vh", // Reduced from 50vh
           maskImage: "linear-gradient(to bottom, black 70%, transparent 100%)",
           WebkitMaskImage: "linear-gradient(to bottom, black 70%, transparent 100%)",
         }}
@@ -35,7 +35,7 @@ const Index = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 min-h-screen flex flex-col items-center">
         {/* Hero Section */}
-        <div className="text-center mb-32 animate-fadeIn [animation-delay:200ms] mt-0"> {/* Reduced from mt-8 */}
+        <div className="text-center mb-16 animate-fadeIn [animation-delay:200ms] mt-8"> {/* Reduced from mt-8 */}
           <img 
             src="/lovable-uploads/5730045a-4732-4583-835d-0b37acb24824.png" 
             alt="DojoDoge Logo" 
@@ -75,7 +75,7 @@ const Index = () => {
         <div className="w-full max-w-2xl mx-auto animate-fadeIn [animation-delay:800ms]">
           <h2 className="text-white text-xl mb-4 text-center">Contract Address</h2>
           <ContractAddress address={contractAddress} />
-          <div className="mt-4 flex justify-center mb-24"> {/* Increased from mb-16 */}
+          <div className="mt-4 flex justify-center mb-16"> {/* Increased from mb-16 */}
             <SocialLink
               icon={ExternalLink}
               href={`https://solscan.io/token/${contractAddress}`}
@@ -86,7 +86,7 @@ const Index = () => {
 
         {/* Bottom Image with Gradient Transition */}
         <div 
-          className="absolute bottom-0 left-0 right-0 h-[70vh] z-0" // Increased from 50vh
+          className="absolute bottom-0 left-0 right-0 h-[50vh] z-0" // Increased from 50vh
           style={{
             backgroundImage: 'url("/lovable-uploads/b513bfe2-91cf-454c-9651-3124b114ef60.png")',
             backgroundSize: "cover",
