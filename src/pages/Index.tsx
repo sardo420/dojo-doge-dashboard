@@ -25,7 +25,7 @@ const Index = () => {
           backgroundRepeat: "no-repeat",
           filter: "brightness(0.7) contrast(1.2)",
           transform: "scale(1.1)",
-          height: "100vh",
+          height: "50vh",
           maskImage: "linear-gradient(to bottom, black 70%, transparent 100%)",
           WebkitMaskImage: "linear-gradient(to bottom, black 70%, transparent 100%)",
         }}
@@ -34,11 +34,11 @@ const Index = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 min-h-screen flex flex-col items-center">
         {/* Hero Section */}
-        <div className="text-center mb-0 animate-fadeIn [animation-delay:200ms] mt-[-3rem]">
+        <div className="text-center mb-0 animate-fadeIn [animation-delay:200ms] mt-8">
           <img 
-            src="/lovable-uploads/73c390be-2c30-45b4-83bd-264ba5051b45.png" 
+            src="/lovable-uploads/5730045a-4732-4583-835d-0b37acb24824.png" 
             alt="DojoDoge Logo" 
-            className="h-60 mx-auto mb-0 drop-shadow-[0_0_50px_rgba(255,255,255,0.15)]"
+            className="h-72 mx-auto mb-0 drop-shadow-[0_0_50px_rgba(255,255,255,0.15)]"
           />
         </div>
 
@@ -74,7 +74,7 @@ const Index = () => {
         <div className="w-full max-w-2xl mx-auto animate-fadeIn [animation-delay:800ms]">
           <h2 className="text-white text-xl mb-4 text-center">Contract Address</h2>
           <ContractAddress address={contractAddress} />
-          <div className="mt-4 flex justify-center">
+          <div className="mt-4 flex justify-center mb-16">
             <SocialLink
               icon={ExternalLink}
               href={`https://solscan.io/token/${contractAddress}`}
@@ -82,6 +82,20 @@ const Index = () => {
             />
           </div>
         </div>
+
+        {/* Bottom Image with Gradient Transition */}
+        <div 
+          className="absolute bottom-0 left-0 right-0 h-[50vh] z-0"
+          style={{
+            backgroundImage: 'url("/lovable-uploads/b513bfe2-91cf-454c-9651-3124b114ef60.png")',
+            backgroundSize: "cover",
+            backgroundPosition: "center top",
+            backgroundRepeat: "no-repeat",
+            maskImage: "linear-gradient(to top, black 80%, transparent 100%)",
+            WebkitMaskImage: "linear-gradient(to top, black 80%, transparent 100%)",
+            opacity: 0.3,
+          }}
+        />
       </div>
     </div>
   );
