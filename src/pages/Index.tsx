@@ -86,7 +86,7 @@ const Index = () => {
 
         {/* Bottom Image with Gradient Transition */}
         <div 
-          className="absolute bottom-0 left-0 right-0 h-[70vh] z-0" // Increased from 50vh
+          className="absolute bottom-0 left-0 right-0 h-[100vh] z-0" // Increased from 50vh
           style={{
             backgroundImage: 'url("/lovable-uploads/b513bfe2-91cf-454c-9651-3124b114ef60.png")',
             backgroundSize: "cover",
