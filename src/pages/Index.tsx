@@ -15,7 +15,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden bg-gradient-to-b from-dojo to-black">
-      {/* Background Image */}
+      {/* Background Image with Gradient Overlay */}
       <div
         className="absolute inset-0 opacity-20 bg-blend-overlay"
         style={{
@@ -26,17 +26,19 @@ const Index = () => {
           filter: "brightness(0.7) contrast(1.2)",
           transform: "scale(1.1)",
           height: "100vh",
+          maskImage: "linear-gradient(to bottom, black 70%, transparent 100%)",
+          WebkitMaskImage: "linear-gradient(to bottom, black 70%, transparent 100%)",
         }}
       />
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-2 min-h-screen flex flex-col items-center">
         {/* Hero Section */}
-        <div className="text-center mb-2 animate-fadeIn [animation-delay:200ms]">
+        <div className="text-center mb-2 animate-fadeIn [animation-delay:200ms] mt-[-2rem]">
           <img 
             src="/lovable-uploads/73c390be-2c30-45b4-83bd-264ba5051b45.png" 
             alt="DojoDoge Logo" 
-            className="h-60 mx-auto mb-1 drop-shadow-[0_0_50px_rgba(255,255,255,0.15)]"
+            className="h-80 mx-auto mb-1 drop-shadow-[0_0_50px_rgba(255,255,255,0.15)]"
           />
         </div>
 
