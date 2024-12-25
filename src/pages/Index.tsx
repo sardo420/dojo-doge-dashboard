@@ -26,7 +26,7 @@ const Index = () => {
           backgroundRepeat: "no-repeat",
           filter: "brightness(0.7) contrast(1.2)",
           transform: "scale(1.1)",
-          height: "40vh", // Reduced from 50vh
+          height: "100vh", // Reduced from 50vh
           maskImage: "linear-gradient(to bottom, black 70%, transparent 100%)",
           WebkitMaskImage: "linear-gradient(to bottom, black 70%, transparent 100%)",
         }}
