@@ -107,7 +107,7 @@ const Index = () => {
             className="inline-flex items-center gap-2 px-6 py-3 text-lg font-semibold text-white bg-blue-500 rounded-full hover:bg-blue-600 transition-colors"
           >
             <MessageCircle className="w-6 h-6" />
-            Join our Telegram now!
+            Find out who will join our Dojo next!
           </a>
         </div>
       </div>
