@@ -32,25 +32,25 @@ const Index = () => {
       />
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 py-2 min-h-screen flex flex-col items-center">
+      <div className="relative z-10 container mx-auto px-4 min-h-screen flex flex-col items-center">
         {/* Hero Section */}
-        <div className="text-center mb-2 animate-fadeIn [animation-delay:200ms] mt-[-2rem]">
+        <div className="text-center mb-0 animate-fadeIn [animation-delay:200ms] mt-[-3rem]">
           <img 
             src="/lovable-uploads/73c390be-2c30-45b4-83bd-264ba5051b45.png" 
             alt="DojoDoge Logo" 
-            className="h-80 mx-auto mb-1 drop-shadow-[0_0_50px_rgba(255,255,255,0.15)]"
+            className="h-60 mx-auto mb-0 drop-shadow-[0_0_50px_rgba(255,255,255,0.15)]"
           />
         </div>
 
         {/* Metrics Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl mx-auto mb-8 animate-fadeIn [animation-delay:400ms]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl mx-auto mb-6 animate-fadeIn [animation-delay:400ms]">
           <MetricCard title="Market Cap" value={tokenMetrics.marketCap} />
           <MetricCard title="Circulation" value={tokenMetrics.circulation} />
           <MetricCard title="Holders" value={tokenMetrics.holders} />
         </div>
 
         {/* Links Section */}
-        <div className="flex flex-col items-center gap-8 mb-8 animate-fadeIn [animation-delay:600ms]">
+        <div className="flex flex-col items-center gap-6 mb-6 animate-fadeIn [animation-delay:600ms]">
           <div className="flex flex-wrap justify-center gap-4">
             <SocialLink
               icon={Twitter}
