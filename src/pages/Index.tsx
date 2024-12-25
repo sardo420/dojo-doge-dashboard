@@ -2,6 +2,7 @@ import { MetricCard } from "@/components/MetricCard";
 import { SocialLink } from "@/components/SocialLink";
 import { ContractAddress } from "@/components/ContractAddress";
 import { Twitter, MessageCircle, BarChart3, ExternalLink } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Index = () => {
   // These would come from your API or be updated dynamically
@@ -25,7 +26,7 @@ const Index = () => {
           backgroundRepeat: "no-repeat",
           filter: "brightness(0.7) contrast(1.2)",
           transform: "scale(1.1)",
-          height: "50vh",
+          height: "40vh", // Reduced from 50vh
           maskImage: "linear-gradient(to bottom, black 70%, transparent 100%)",
           WebkitMaskImage: "linear-gradient(to bottom, black 70%, transparent 100%)",
         }}
@@ -34,7 +35,7 @@ const Index = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 min-h-screen flex flex-col items-center">
         {/* Hero Section */}
-        <div className="text-center mb-0 animate-fadeIn [animation-delay:200ms] mt-8">
+        <div className="text-center mb-0 animate-fadeIn [animation-delay:200ms] mt-2"> {/* Reduced from mt-8 */}
           <img 
             src="/lovable-uploads/5730045a-4732-4583-835d-0b37acb24824.png" 
             alt="DojoDoge Logo" 
@@ -74,7 +75,7 @@ const Index = () => {
         <div className="w-full max-w-2xl mx-auto animate-fadeIn [animation-delay:800ms]">
           <h2 className="text-white text-xl mb-4 text-center">Contract Address</h2>
           <ContractAddress address={contractAddress} />
-          <div className="mt-4 flex justify-center mb-16">
+          <div className="mt-4 flex justify-center mb-24"> {/* Increased from mb-16 */}
             <SocialLink
               icon={ExternalLink}
               href={`https://solscan.io/token/${contractAddress}`}
@@ -85,7 +86,7 @@ const Index = () => {
 
         {/* Bottom Image with Gradient Transition */}
         <div 
-          className="absolute bottom-0 left-0 right-0 h-[50vh] z-0"
+          className="absolute bottom-0 left-0 right-0 h-[70vh] z-0" // Increased from 50vh
           style={{
             backgroundImage: 'url("/lovable-uploads/b513bfe2-91cf-454c-9651-3124b114ef60.png")',
             backgroundSize: "cover",
@@ -96,6 +97,19 @@ const Index = () => {
             opacity: 0.3,
           }}
         />
+
+        {/* Telegram Button */}
+        <div className="relative z-20 mt-32 mb-8 animate-fadeIn">
+          <a 
+            href="https://t.me/dojodoge" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-6 py-3 text-lg font-semibold text-white bg-blue-500 rounded-full hover:bg-blue-600 transition-colors"
+          >
+            <MessageCircle className="w-6 h-6" />
+            Join our Telegram now!
+          </a>
+        </div>
       </div>
     </div>
   );
