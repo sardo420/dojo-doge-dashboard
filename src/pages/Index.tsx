@@ -15,9 +15,9 @@ const Index = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden bg-gradient-to-b from-dojo to-black">
-      {/* Background Image with Gradient Overlay */}
+      {/* Background Image with Gradient Overlay - Moving to back */}
       <div
-        className="absolute inset-0 opacity-40 bg-blend-overlay"
+        className="absolute inset-0 opacity-40 bg-blend-overlay -z-10"
         style={{
           backgroundImage: 'url("/lovable-uploads/4183c626-f78e-4e7f-957f-5f48277d742a.png")',
           backgroundSize: "cover",
@@ -47,8 +47,8 @@ const Index = () => {
           <MetricCard title="Holders" value={tokenMetrics.holders} />
         </div>
 
-        {/* Links Section */}
-        <div className="flex flex-col items-center gap-6 mb-6 animate-fadeIn [animation-delay:600ms]">
+        {/* Links Section - Ensuring it's above background elements */}
+        <div className="flex flex-col items-center gap-6 mb-6 animate-fadeIn [animation-delay:600ms] relative z-20">
           <div className="flex flex-wrap justify-center gap-4">
             <a
               href="https://x.com/dojodoge"
@@ -94,14 +94,14 @@ const Index = () => {
         </div>
 
         {/* Contract Address */}
-        <div className="w-full max-w-2xl mx-auto animate-fadeIn [animation-delay:800ms]">
+        <div className="w-full max-w-2xl mx-auto animate-fadeIn [animation-delay:800ms] relative z-20">
           <h2 className="text-white text-xl mb-4 text-center">Contract Address</h2>
           <ContractAddress address={contractAddress} />
         </div>
 
-        {/* Bottom Image with Gradient Transition */}
+        {/* Bottom Image with Gradient Transition - Moving to back */}
         <div 
-          className="absolute bottom-0 left-0 right-0 h-[100vh] z-0"
+          className="absolute bottom-0 left-0 right-0 h-[100vh] -z-10"
           style={{
             backgroundImage: 'url("/lovable-uploads/b513bfe2-91cf-454c-9651-3124b114ef60.png")',
             backgroundSize: "cover",
@@ -113,7 +113,7 @@ const Index = () => {
           }}
         />
 
-        {/* Telegram Button */}
+        {/* Telegram Button - Ensuring it's above background elements */}
         <div className="relative z-20 mt-32 mb-8 animate-fadeIn">
           <a 
             href="https://t.me/dojodoge" 
