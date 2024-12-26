@@ -119,7 +119,7 @@ const Index = () => {
             href="https://t.me/dojodoge" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-4 text-lg font-bold text-white bg-gradient-to-br from-purple-600 via-indigo-600 to-blue-600 rounded-full hover:from-purple-700 hover:via-indigo-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 cursor-pointer"
+            className="inline-flex items-center gap-2 px-8 py-4 text-lg font-bold text-white bg-gradient-to-r from-purple-600 to-blue-600 rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 cursor-pointer"
           >
             <MessageCircle className="w-6 h-6" />
             Find out who will join our Dojo next!
