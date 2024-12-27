@@ -50,9 +50,9 @@ const Index = () => {
         {/* About Section */}
         <div className="w-full max-w-2xl mx-auto mb-24 animate-fadeIn [animation-delay:900ms] relative z-20">
           <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
-            <h3 className="text-white text-xl mb-4">About DojoDoge</h3>
+            <h3 className="text-white text-xl mb-4">The Dojo</h3>
             <p className="text-dojo-light leading-relaxed">
-              Join the most ambitious meme coin project on Solana. DojoDoge combines the playful spirit of meme coins with real utility and community governance. Our mission is to create a decentralized ecosystem that rewards holders and contributes to the broader Solana ecosystem.
+               DOjoDoge is always searching for a wortyh target to eliminate, he will only choose someone with a bigger marketcap, for honor maxxing like a true DojoDoge Samurai
             </p>
           </div>
         </div>
