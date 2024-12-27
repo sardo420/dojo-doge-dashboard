@@ -1,7 +1,8 @@
-import { MetricCard } from "@/components/MetricCard";
-import { SocialLink } from "@/components/SocialLink";
 import { ContractAddress } from "@/components/ContractAddress";
-import { Twitter, MessageCircle, BarChart3, ExternalLink } from "lucide-react";
+import { MessageCircle } from "lucide-react";
+import { Hero } from "@/components/Hero";
+import { MetricsGrid } from "@/components/MetricsGrid";
+import { SocialLinks } from "@/components/SocialLinks";
 
 const Index = () => {
   const tokenMetrics = {
@@ -13,89 +14,30 @@ const Index = () => {
   const contractAddress = "0x1234...5678";
 
   return (
-    <div className="min-h-screen relative overflow-hidden">
-      {/* First Background Image */}
+    <div className="min-h-screen bg-dojo relative overflow-hidden">
+      {/* Background Image */}
       <div
-        className="absolute inset-0 -z-10"
+        className="absolute inset-0"
         style={{
           backgroundImage: 'url("/lovable-uploads/dbd55c84-2d2d-48c0-9056-44ac9cccccc5.png")',
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           opacity: 0.4,
-          height: "100%",
         }}
       />
 
       {/* Gradient Overlay */}
       <div 
-        className="absolute inset-0 -z-5 bg-gradient-to-b from-dojo/80 to-black/90"
-        style={{ opacity: 0.85 }}
+        className="absolute inset-0 bg-gradient-to-b from-dojo/60 to-black/90"
+        style={{ opacity: 0.9 }}
       />
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 min-h-screen flex flex-col items-center">
-        {/* Hero Section */}
-        <div className="text-center mb-0 animate-fadeIn [animation-delay:200ms] mt-2">
-          <img 
-            src="/lovable-uploads/5730045a-4732-4583-835d-0b37acb24824.png" 
-            alt="DojoDoge Logo" 
-            className="h-72 mx-auto mb-0 drop-shadow-[0_0_50px_rgba(255,255,255,0.15)]"
-          />
-        </div>
-
-        {/* Metrics Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-4xl mx-auto mb-6 animate-fadeIn [animation-delay:400ms]">
-          <MetricCard title="Market Cap" value={tokenMetrics.marketCap} />
-          <MetricCard title="Circulation" value={tokenMetrics.circulation} />
-          <MetricCard title="Holders" value={tokenMetrics.holders} />
-        </div>
-
-        {/* Links Section */}
-        <div className="flex flex-col items-center gap-6 mb-6 animate-fadeIn [animation-delay:600ms] relative z-20">
-          <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href="https://x.com/dojodoge"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 hover:bg-white/10 backdrop-blur-sm cursor-pointer"
-            >
-              <svg className="w-5 h-5 text-dojo-light group-hover:text-white transition-colors" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
-                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
-              </svg>
-              <span className="text-dojo-light group-hover:text-white transition-colors">X</span>
-            </a>
-            <a
-              href="https://t.me/dojodoge"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 hover:bg-white/10 backdrop-blur-sm cursor-pointer"
-            >
-              <MessageCircle className="w-5 h-5 text-dojo-light group-hover:text-white transition-colors" />
-              <span className="text-dojo-light group-hover:text-white transition-colors">Telegram</span>
-            </a>
-            <div className="flex items-center gap-2">
-              <a
-                href="https://dexscreener.com/dojodoge"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 hover:bg-white/10 backdrop-blur-sm cursor-pointer"
-              >
-                <BarChart3 className="w-5 h-5 text-dojo-light group-hover:text-white transition-colors" />
-                <span className="text-dojo-light group-hover:text-white transition-colors">DEX Screener</span>
-              </a>
-              <a
-                href={`https://solscan.io/token/${contractAddress}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 hover:bg-white/10 backdrop-blur-sm cursor-pointer"
-              >
-                <ExternalLink className="w-5 h-5 text-dojo-light group-hover:text-white transition-colors" />
-                <span className="text-dojo-light group-hover:text-white transition-colors">Solscan</span>
-              </a>
-            </div>
-          </div>
-        </div>
+        <Hero />
+        <MetricsGrid {...tokenMetrics} />
+        <SocialLinks contractAddress={contractAddress} />
 
         {/* Contract Address */}
         <div className="w-full max-w-2xl mx-auto animate-fadeIn [animation-delay:800ms] relative z-20 mb-12">
@@ -103,7 +45,7 @@ const Index = () => {
           <ContractAddress address={contractAddress} />
         </div>
 
-        {/* New Placeholder Paragraph Box */}
+        {/* About Section */}
         <div className="w-full max-w-2xl mx-auto mb-24 animate-fadeIn [animation-delay:900ms] relative z-20">
           <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
             <h3 className="text-white text-xl mb-4">About DojoDoge</h3>
@@ -113,9 +55,9 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Bottom Image with Gradient Transition */}
+        {/* Bottom Image */}
         <div 
-          className="absolute bottom-0 left-0 right-0 h-[100vh] -z-10"
+          className="absolute bottom-0 left-0 right-0 h-[100vh]"
           style={{
             backgroundImage: 'url("/lovable-uploads/b513bfe2-91cf-454c-9651-3124b114ef60.png")',
             backgroundSize: "cover",
