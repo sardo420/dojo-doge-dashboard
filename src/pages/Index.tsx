@@ -48,7 +48,7 @@ const Index = () => {
         </div>
 
         {/* About Section */}
-        <div className="w-full max-w-2xl mx-auto mb-24 animate-fadeIn [animation-delay:900ms] relative z-20">
+        <div className="w-full max-w-2xl mx-auto mb-32 animate-fadeIn [animation-delay:900ms] relative z-20">
           <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
             <h3 className="text-white text-xl mb-4">The Dojo</h3>
             <p className="text-dojo-light leading-relaxed">
