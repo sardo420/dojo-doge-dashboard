@@ -10,7 +10,7 @@ export const SocialLinks = ({ contractAddress }: SocialLinksProps) => {
     <div className="flex flex-col items-center gap-6 mb-6 animate-fadeIn [animation-delay:600ms] relative z-20">
       <div className="flex flex-wrap justify-center gap-4">
         <a
-          href="https://x.com/dojodoge"
+          href="https://x.com/DojoDoge_SOL"
           target="_blank"
           rel="noopener noreferrer"
           className="group flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 hover:bg-white/10 backdrop-blur-sm cursor-pointer"
