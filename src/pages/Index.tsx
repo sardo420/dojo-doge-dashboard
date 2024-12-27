@@ -15,17 +15,16 @@ const Index = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden bg-gradient-to-b from-dojo to-black">
-      {/* First Background Image with Gradient Overlay */}
+      {/* First Background Image */}
       <div
-        className="absolute inset-0 opacity-40 bg-blend-overlay -z-10"
+        className="absolute inset-0 -z-10"
         style={{
-          backgroundImage: 'url("/lovable-uploads/4183c626-f78e-4e7f-957f-5f48277d742a.png")',
+          backgroundImage: 'url("/lovable-uploads/dbd55c84-2d2d-48c0-9056-44ac9cccccc5.png")',
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          height: "100vh",
-          maskImage: "linear-gradient(to bottom, black 90%, transparent 100%)",
-          WebkitMaskImage: "linear-gradient(to bottom, black 90%, transparent 100%)",
+          opacity: 0.4,
+          height: "100%",
         }}
       />
 
