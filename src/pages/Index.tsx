@@ -120,7 +120,7 @@ const Index = () => {
             maskImage: "linear-gradient(to top, black 80%, transparent 100%)",
             WebkitMaskImage: "linear-gradient(to top, black 80%, transparent 100%)",
             opacity: 0.6,
-            marginTop: "10vh", // Creates space between background images
+            marginTop: "10vh",
           }}
         />
 
