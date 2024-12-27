@@ -2,7 +2,6 @@ import { MetricCard } from "@/components/MetricCard";
 import { SocialLink } from "@/components/SocialLink";
 import { ContractAddress } from "@/components/ContractAddress";
 import { Twitter, MessageCircle, BarChart3, ExternalLink } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const Index = () => {
   const tokenMetrics = {
@@ -14,7 +13,7 @@ const Index = () => {
   const contractAddress = "0x1234...5678";
 
   return (
-    <div className="min-h-screen relative overflow-hidden bg-gradient-to-b from-dojo to-black">
+    <div className="min-h-screen relative overflow-hidden">
       {/* First Background Image */}
       <div
         className="absolute inset-0 -z-10"
@@ -26,6 +25,12 @@ const Index = () => {
           opacity: 0.4,
           height: "100%",
         }}
+      />
+
+      {/* Gradient Overlay */}
+      <div 
+        className="absolute inset-0 -z-5 bg-gradient-to-b from-dojo/80 to-black/90"
+        style={{ opacity: 0.85 }}
       />
 
       {/* Content */}
