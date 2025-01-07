@@ -14,7 +14,7 @@ const Index = () => {
   const contractAddress = "0x1234...5678";
 
   return (
-    <div className="min-h-screen bg-dojo relative">
+    <div className="min-h-screen bg-dojo relative overflow-hidden">
       {/* First Background Image */}
       <div
         className="absolute top-0 left-0 right-0 z-0"
@@ -24,13 +24,14 @@ const Index = () => {
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           height: "100vh",
+          filter: "brightness(0.9) contrast(1.1)",
         }}
       />
 
       {/* Gradient Overlay */}
       <div 
-        className="absolute top-0 left-0 right-0 h-screen z-10 bg-gradient-to-b from-dojo/60 to-black/90"
-        style={{ opacity: 0.9 }}
+        className="absolute top-0 left-0 right-0 h-screen z-10 bg-gradient-to-b from-dojo/80 via-black/70 to-transparent"
+        style={{ opacity: 0.95 }}
       />
 
       {/* Content */}
@@ -55,21 +56,29 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Bottom Image */}
-        <div 
-          className="absolute bottom-0 left-0 right-0 z-0"
-          style={{
-            backgroundImage: 'url("/lovable-uploads/b513bfe2-91cf-454c-9651-3124b114ef60.png")',
-            backgroundSize: "cover",
-            backgroundPosition: "center top",
-            backgroundRepeat: "no-repeat",
-            height: "100vh",
-            marginTop: "100vh",
-          }}
-        />
+        {/* Bottom Image Container with Gradient */}
+        <div className="relative w-full" style={{ marginTop: "20vh" }}>
+          {/* Gradient Overlay for Bottom Image */}
+          <div 
+            className="absolute top-0 left-0 right-0 z-20 h-32 bg-gradient-to-b from-black to-transparent"
+          />
+          
+          {/* Bottom Image */}
+          <div 
+            className="relative z-10"
+            style={{
+              backgroundImage: 'url("/lovable-uploads/b513bfe2-91cf-454c-9651-3124b114ef60.png")',
+              backgroundSize: "cover",
+              backgroundPosition: "center top",
+              backgroundRepeat: "no-repeat",
+              height: "100vh",
+              filter: "brightness(0.85) contrast(1.1)",
+            }}
+          />
+        </div>
 
         {/* Telegram Button */}
-        <div className="relative z-20 mt-8 mb-16 animate-fadeIn">
+        <div className="relative z-30 mt-8 mb-16 animate-fadeIn">
           <a 
             href="https://t.me/dojodoge" 
             target="_blank" 
