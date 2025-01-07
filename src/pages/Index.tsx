@@ -56,27 +56,6 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Bottom Image Container with Gradient */}
-        <div className="relative w-full" style={{ marginTop: "20vh" }}>
-          {/* Gradient Overlay for Bottom Image */}
-          <div 
-            className="absolute top-0 left-0 right-0 z-20 h-32 bg-gradient-to-b from-black to-transparent"
-          />
-          
-          {/* Bottom Image */}
-          <div 
-            className="relative z-10"
-            style={{
-              backgroundImage: 'url("/lovable-uploads/b513bfe2-91cf-454c-9651-3124b114ef60.png")',
-              backgroundSize: "cover",
-              backgroundPosition: "center top",
-              backgroundRepeat: "no-repeat",
-              height: "100vh",
-              filter: "brightness(0.85) contrast(1.1)",
-            }}
-          />
-        </div>
-
         {/* Telegram Button */}
         <div className="relative z-30 mt-8 mb-16 animate-fadeIn">
           <a 
