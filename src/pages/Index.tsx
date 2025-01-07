@@ -14,41 +14,39 @@ const Index = () => {
   const contractAddress = "0x1234...5678";
 
   return (
-    <div className="min-h-screen bg-dojo relative overflow-hidden">
-      {/* Background Image */}
+    <div className="min-h-screen bg-dojo relative">
+      {/* First Background Image */}
       <div
-        className="absolute inset-0"
+        className="fixed top-0 left-0 right-0 z-0"
         style={{
           backgroundImage: 'url("/lovable-uploads/dbd55c84-2d2d-48c0-9056-44ac9cccccc5.png")',
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           height: "100vh",
-          maskImage: "linear-gradient(to bottom, black 70%, transparent 100%)",
-          WebkitMaskImage: "linear-gradient(to bottom, black 70%, transparent 100%)",
         }}
       />
 
       {/* Gradient Overlay */}
       <div 
-        className="absolute inset-0 bg-gradient-to-b from-dojo/60 to-black/90"
+        className="fixed top-0 left-0 right-0 h-screen z-10 bg-gradient-to-b from-dojo/60 to-black/90"
         style={{ opacity: 0.9 }}
       />
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 min-h-screen flex flex-col items-center">
+      <div className="relative z-20 container mx-auto px-4 min-h-screen flex flex-col items-center">
         <Hero />
         <MetricsGrid {...tokenMetrics} />
         <SocialLinks contractAddress={contractAddress} />
 
         {/* Contract Address */}
-        <div className="w-full max-w-2xl mx-auto animate-fadeIn [animation-delay:800ms] relative z-20 mb-12">
+        <div className="w-full max-w-2xl mx-auto animate-fadeIn [animation-delay:800ms] mb-12">
           <h2 className="text-white text-xl mb-4 text-center">Contract Address</h2>
           <ContractAddress address={contractAddress} />
         </div>
 
         {/* About Section */}
-        <div className="w-full max-w-2xl mx-auto mb-32 animate-fadeIn [animation-delay:900ms] relative z-20">
+        <div className="w-full max-w-2xl mx-auto mb-32 animate-fadeIn [animation-delay:900ms]">
           <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10">
             <h3 className="text-white text-xl mb-4">The Dojo</h3>
             <p className="text-dojo-light leading-relaxed">
@@ -59,16 +57,13 @@ const Index = () => {
 
         {/* Bottom Image */}
         <div 
-          className="absolute bottom-0 left-0 right-0 h-[100vh]"
+          className="fixed bottom-0 left-0 right-0 z-0"
           style={{
             backgroundImage: 'url("/lovable-uploads/b513bfe2-91cf-454c-9651-3124b114ef60.png")',
             backgroundSize: "cover",
             backgroundPosition: "center top",
             backgroundRepeat: "no-repeat",
-            maskImage: "linear-gradient(to top, black 80%, transparent 100%)",
-            WebkitMaskImage: "linear-gradient(to top, black 80%, transparent 100%)",
-            opacity: 0.6,
-            marginTop: "10vh",
+            height: "100vh",
           }}
         />
 
