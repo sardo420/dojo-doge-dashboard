@@ -57,7 +57,7 @@ const Index = () => {
 
         {/* Bottom Image */}
         <div 
-          className="fixed bottom-0 left-0 right-0 z-0"
+          className="absolute bottom-0 left-0 right-0 z-0"
           style={{
             backgroundImage: 'url("/lovable-uploads/b513bfe2-91cf-454c-9651-3124b114ef60.png")',
             backgroundSize: "cover",
