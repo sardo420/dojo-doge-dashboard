@@ -17,7 +17,7 @@ const Index = () => {
     <div className="min-h-screen bg-dojo relative">
       {/* First Background Image */}
       <div
-        className="fixed top-0 left-0 right-0 z-0"
+        className="absolute top-0 left-0 right-0 z-0"
         style={{
           backgroundImage: 'url("/lovable-uploads/dbd55c84-2d2d-48c0-9056-44ac9cccccc5.png")',
           backgroundSize: "cover",
@@ -29,7 +29,7 @@ const Index = () => {
 
       {/* Gradient Overlay */}
       <div 
-        className="fixed top-0 left-0 right-0 h-screen z-10 bg-gradient-to-b from-dojo/60 to-black/90"
+        className="absolute top-0 left-0 right-0 h-screen z-10 bg-gradient-to-b from-dojo/60 to-black/90"
         style={{ opacity: 0.9 }}
       />
 
@@ -57,13 +57,14 @@ const Index = () => {
 
         {/* Bottom Image */}
         <div 
-          className="fixed bottom-0 left-0 right-0 z-0"
+          className="absolute bottom-0 left-0 right-0 z-0"
           style={{
             backgroundImage: 'url("/lovable-uploads/b513bfe2-91cf-454c-9651-3124b114ef60.png")',
             backgroundSize: "cover",
             backgroundPosition: "center top",
             backgroundRepeat: "no-repeat",
             height: "100vh",
+            marginTop: "100vh",
           }}
         />
 
